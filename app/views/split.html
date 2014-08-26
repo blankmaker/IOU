@@ -1,0 +1,33 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 class="panel-title">Amsterdam (6/15): Whatchu gotta split?</h1>
+  </div>
+  <div class="panel-body">
+    <form class="form-horizontal" role="form" ng-submit="addSplitter()">
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">Split with:</label>
+        <div class="input-group">
+          <div class="input-group-addon">+</div>
+          <input class="form-control" type="text" placeholder="Who are you splitting with?" ng-model="splitter" >
+        </div>
+      </div>
+    </form>
+    <div class="splittees">
+      <label class="col-sm-2 control-label"></label>
+      <span class="label label-success" ng-repeat="splitter in splitters"> {{ splitter }} </span>
+    </div>
+
+    <!-- add split form -->
+  </div>
+
+</div>
+
+
+<!--     <ul class="list-group">
+    <li class="input-group">
+      <span class="input-group-addon">+</span>
+      <form ng-submit="addSplitter()">
+      <input type="text" class="form-control" placeholder="Add person to trip" ng-model="splitter" >
+      </form>
+    </li>
+ -->
