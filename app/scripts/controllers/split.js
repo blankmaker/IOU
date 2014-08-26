@@ -9,16 +9,18 @@
  */
 angular.module('iouApp')
   .controller('SplitCtrl', function ($scope) {
-    $scope.splitters = ['David','Tony'];
+    $scope.splitters = [];
     $scope.splitter = '';
     $scope.lineItems = [];
     $scope.total = 0;
     $scope.whoPaid = '';
     $scope.cost = 0;
     $scope.item = '';
+    $scope.reveal = false;
     $scope.addSplitter = function() {
        $scope.splitters.push($scope.splitter);
        $scope.splitter = '';
+
     };
     $scope.addLineItem = function() {
       var lineItem = { 
@@ -32,5 +34,9 @@ angular.module('iouApp')
       $scope.cost = 0;
       $scope.whoPaid = '';
     };
+    $scope.calculate = function() {
+     console.log('i work');
+    };
+
 
   });

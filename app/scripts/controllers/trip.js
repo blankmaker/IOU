@@ -9,7 +9,7 @@
  */
 angular.module('iouApp')
   .controller('TripCtrl', function ($scope) {
-    $scope.trips = ['Puerto Rico', 'Amsterdam'];
+    $scope.trips = [];
     $scope.trip = '';
     $scope.addTrip = function() {
        $scope.trips.unshift($scope.trip);

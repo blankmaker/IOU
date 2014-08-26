@@ -81,4 +81,9 @@ body {
   margin-top: 15px;
   margin-left: -20px;
 }
-
+.panel-header-with-button {
+  display: inline-block;
+}
+.button-for-header {
+  float: right;
+}
