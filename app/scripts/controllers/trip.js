@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc function
- * @name iouApp.controller:MainCtrl
+ * @name iouApp.controller:TripCtrl
  * @description
- * # MainCtrl
+ * # TripCtrl
  * Controller of the iouApp
  */
 angular.module('iouApp')
