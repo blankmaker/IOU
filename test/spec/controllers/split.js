@@ -3,7 +3,7 @@
 describe('Controller: SplitCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('iouApp'));
+  beforeEach(module('splitsiesApp'));
 
   var SplitCtrl,
     scope;

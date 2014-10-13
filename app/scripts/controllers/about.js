@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name iouApp.controller:AboutCtrl
+ * @name splitsiesApp.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the iouApp
+ * Controller of the splitsiesApp
  */
-angular.module('iouApp')
+angular.module('splitsiesApp')
   .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name iouApp
+ * @name splitsiesApp
  * @description
- * # iouApp
+ * # splitsiesApp
  *
  * Main module of the application.
  */
 angular
-  .module('iouApp', [
+  .module('splitsiesApp', [
     'ngAnimate',
     'ngResource',
     'ngRoute'

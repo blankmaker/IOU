@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name iouApp.controller:SplitCtrl
+ * @name splitsiesApp.controller:SplitCtrl
  * @description
  * # SplitCtrl
- * Controller of the iouApp
+ * Controller of the splitsiesApp
  */
-angular.module('iouApp')
+angular.module('splitsiesApp')
   .controller('SplitCtrl', function ($scope) {
     $scope.splitters = [];
     $scope.splitter = '';

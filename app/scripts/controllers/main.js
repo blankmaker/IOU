@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name iouApp.controller:MainCtrl
+ * @name splitsiesApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the iouApp
+ * Controller of the splitsiesApp
  */
-angular.module('iouApp')
+angular.module('splitsiesApp')
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
@@ -15,3 +15,4 @@ angular.module('iouApp')
       'Karma'
     ];
   });
+// 
