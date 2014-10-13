@@ -3,11 +3,10 @@
     <h1 class="panel-title">Your trips</h1>
   </div>
   <div class="panel-body">
-    <!-- do we need 'split?-->
     <ul class="list-group">
     <li class="input-group">
       <span class="input-group-addon">+</span>
-      <form ng-submit="addTrip()">
+      <form ng-submit="addTrip(trip)">
       <input type="text" class="form-control" placeholder="Add trip..." ng-model="trip" >
       </form>
     </li>
