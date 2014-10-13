@@ -1,21 +1,22 @@
 
-  <div class="alert alert-success" role="alert" ng-show="reveal">
+  <!-- <div class="alert alert-success" role="alert" ng-show="reveal">
       <h4>{{ alertMessage | uppercase }}</h4>
      <p ng-repeat="splitter in splitters">{{ splitter.name }} owes {{ splitter.owes | currency | orderBy : reverse }}</p>
-  </div>
+  </div> -->
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h1 class="panel-title">Amsterdam: Whatchu gon' split?</h1>
+    <h1 class="panel-title">Enter your trip costs below</h1>
   </div>
   <div class="panel-body">
+
     <!-- ADD SPLITTEES -->
-    <form class="form-horizontal" role="form" ng-submit="addSplitter()">
+    <form class="form-horizontal" name="test" role="form" ng-submit="addSplitter(splitter)">
       <div class="form-group">
         <label for="inputEmail3" class="col-sm-2 control-label">Split with:</label>
         <div class="input-group">
           <div class="input-group-addon">+</div>
-          <input class="form-control" type="text" placeholder="Who are you splitting with?" ng-model="splitter" >
+          <input class="form-control" type="text" placeholder="Who are you splitting with?" ng-model="splitter">
         </div>
       </div>
     </form>
@@ -27,7 +28,7 @@
 <br />
     <!-- EXPENSES -->
 
-<form class="form-inline" role="form" ng-submit="addLineItem()">
+<form name="test" class="form-inline" role="form" ng-submit="addLineItem(item,cost,whoPaid)">
 
     <input class="form-control" type="text" placeholder="What was it?" ng-model="item" required>
 
