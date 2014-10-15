@@ -9,10 +9,10 @@
  */
 
 angular.module('splitsiesApp')
-  .controller('SplitCtrl', function ($scope, Split) {
+  .controller('SplitCtrl', ['$scope', 'Split', function ($scope, Split) {
     $scope.result;
     $scope.splitters = Split.splitters;
-    $scope.total = Split.totals();
+    // $scope.total = Split.totals;
     $scope.addSplitter = function(splitter) {Split.addSplitter(splitter);
       $scope.splitter = null;
     };
@@ -23,7 +23,7 @@ angular.module('splitsiesApp')
       $scope.item = null;
       $scope.cost = null;
       $scope.whoPaid = null;
-      console.log(Split);
+      // console.log(Split)
     };
 
     $scope.showAlert = false;
@@ -32,28 +32,5 @@ angular.module('splitsiesApp')
       $scope.showAlert = true;
 
     };
-    
 
-  });
-
-    //   // make the sentence
-    //   if (isOwed.length === 1) {
-    //     $scope.alertMessage += isOwed[0];
-    //   } else if (isOwed.length === 2) {
-    //     $scope.alertMessage += isOwed[0] + ' and ' + isOwed[1];
-    //   } else {
-    //     for (var m = 0; m < isOwed.length; m++) {
-    //       if (m === isOwed.length-1) {
-    //         $scope.alertMessage += 'and ' + isOwed[m];
-    //       } else {
-    //         $scope.alertMessage += isOwed[m] + ', ';
-    //       }
-    //     }
-    //   }
-  
-    // $scope.alertMessage += ' the money!';
-      
-    // $scope.reveal = true;
-    // console.log(isOwed);
-    //  console.log($scope.alertMessage);
-    // };
+  }]);
