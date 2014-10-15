@@ -1,8 +1,9 @@
 
-  <!-- <div class="alert alert-success" role="alert" ng-show="reveal">
-      <h4>{{ alertMessage | uppercase }}</h4>
-     <p ng-repeat="splitter in splitters">{{ splitter.name }} owes {{ splitter.owes | currency | orderBy : reverse }}</p>
-  </div> -->
+  <div class="alert alert-success" role="alert" ng-show="showAlert" ng-model="result">
+      <h4>total {{ result.total | currency }}</h4>
+      <p>The cost per person for this trip is: {{ result.costPP | currency }} </p>
+     <p ng-repeat="splitter in splitters">{{ splitter.name }} owes {{ splitter.dueMoney | currency | orderBy : reverse }}</p>
+  </div>
 
 <div class="panel panel-default">
   <div class="panel-heading">
@@ -11,7 +12,7 @@
   <div class="panel-body">
 
     <!-- ADD SPLITTEES -->
-    <form class="form-horizontal" name="test" role="form" ng-submit="addSplitter(splitter)">
+    <form class="form-horizontal" role="form" ng-submit="addSplitter(splitter)">
       <div class="form-group">
         <label for="inputEmail3" class="col-sm-2 control-label">Split with:</label>
         <div class="input-group">
@@ -21,11 +22,8 @@
       </div>
     </form>
     <div class="splittees">
-      <label class="col-sm-2 control-label"></label>
       <span class="label label-success" ng-repeat="splitter in splitters"> {{ splitter.name }} </span>
     </div>
-<br />
-<br />
     <!-- EXPENSES -->
 
 <form name="test" class="form-inline" role="form" ng-submit="addLineItem(item,cost,whoPaid)">
@@ -41,9 +39,9 @@
 
 <br />
 <!-- TABLE OF LINE ITEMS --> 
-  <table class="table">
+  <table class="table" ng-model="total">
     <tr class="info">
-      <th>Total trip cost: {{ total | currency }} </th>
+      <th id="total" >Total trip cost: {{ total | currency }} </th>
       <th></th>
       <th>
         <form class="form-inline" role="form" ng-submit="calculate()">

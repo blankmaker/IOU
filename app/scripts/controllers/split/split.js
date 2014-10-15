@@ -7,10 +7,12 @@
  * # SplitCtrl
  * Controller of the splitsiesApp
  */
+
 angular.module('splitsiesApp')
   .controller('SplitCtrl', function ($scope, Split) {
-
+    $scope.result;
     $scope.splitters = Split.splitters;
+    $scope.total = Split.totals();
     $scope.addSplitter = function(splitter) {Split.addSplitter(splitter);
       $scope.splitter = null;
     };
@@ -21,24 +23,18 @@ angular.module('splitsiesApp')
       $scope.item = null;
       $scope.cost = null;
       $scope.whoPaid = null;
+      console.log(Split);
     };
 
-    $scope.calculate = Split.calculate;
+    $scope.showAlert = false;
+    $scope.calculate = function() {
+      $scope.result = Split.calculate();
+      $scope.showAlert = true;
+
+    };
+    
 
   });
-    // $scope.calculate = function() {
-    //   var isOwed =[];
-    //   var costPP = $scope.total/$scope.splitters.length;
-
-    //   for (var j = 0; j < $scope.splitters.length; j++) {
-    //     $scope.splitters[j].owes = costPP - $scope.splitters[j].contributed;
-    //   }
-    //   // gather those who are owed money
-    //   for (var k = 0; k < $scope.splitters.length; k++) {
-    //     if ($scope.splitters[k].owes < 0) {
-    //       isOwed.push($scope.splitters[k].name);
-    //     }
-    //   }
 
     //   // make the sentence
     //   if (isOwed.length === 1) {

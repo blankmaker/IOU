@@ -5,18 +5,21 @@ angular.module('splitsiesApp')
   .factory('Split', function($http) {
 
     var total = 0;
+    var totals = function() {
+      return total;
+    }
     var costPP = 0;
 
-    var splitters = [];
-    // var splittersLength = 0;
+    var splitters = {};
+    var splittersLength = 0;
 
     var addSplitter = function(splitter) {
-      var member = {
+      splitters[splitter] = {
         name: splitter,
         contributed: 0,
         owes: 0
       };
-      splitters.push(member);
+      splittersLength++;
       // change this into a hashtable?
     };
 
@@ -27,27 +30,40 @@ angular.module('splitsiesApp')
         cost: cost,
         whoPaid: whoPaid
       };
-
       // update totals for later
       total += cost;
-      costPP = total/splitters.length;
-      // splitters[whoPaid][contributed] += cost;
-
+      costPP = total/splittersLength;
+      splitters[whoPaid].contributed += cost;
       lineItems.push(lineItem);
     };
 
     var calculate = function() {
+      var sentenceInfo = {
+        owes: [],
+        dueMoney: [],
+        total: total,
+        costPP: costPP
+      };
+      for (var splitter in splitters) {
+        splitters[splitter].owes -= splitters[splitter].contributed - costPP;
 
-      console.log(total);
-      console.log(costPP);
-    }
+        if (splitters[splitter].owes > 0) {
+          sentenceInfo.owes.push(splitters[splitter]);
+        } else {
+          sentenceInfo.dueMoney.push(splitters[splitter]);
+        }
+      }
+      return sentenceInfo;
+    };
 
     return {
       splitters: splitters,
       addSplitter: addSplitter,
       lineItems: lineItems,
       addLineItem: addLineItem, 
-      calculate: calculate,
+      costPP: costPP,
+      totals: totals,
+      calculate: calculate
     };
 
   });

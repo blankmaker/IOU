@@ -88,6 +88,7 @@ body {
 .splittees {
   margin-top: 15px;
   margin-left: -20px;
+  margin-bottom: 100px;
 }
 .panel-header-with-button {
   display: inline-block;
@@ -101,3 +102,15 @@ body {
 }
 .nav-container {
 }
+
+#total {
+  vertical-align: middle;
+}
+
+.splittees {
+  margin-left: 100px;
+
+}
+
+
+
