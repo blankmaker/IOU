@@ -13,37 +13,34 @@ Oh, and I also like to write press-releases in what I call "Oprah-speak" for mai
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
-  > My City
+  > Splitsies
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
-  > Help your out-of-town friends by sharing your recommendations on the best places to go. 
+  > Spend more time exploring and less time bookkeeping
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
-  > Often, out-of-town friends will ask for local recommendations on where to eat, where to hang out, and things to check out. Rather than repeating yourself over-and-over  again, just send them a link to your My City page, which will have all the recommendations on an easy to read map. 
+
+  > Traveling with friends is supposed to fun. Let's keep it that way. Splitsies helps you easily divide costs between your travel buddies. Just enter what you've paid for and then Splitsies does the rest. 
+
 
 ## Problem ##
-  > Describe the problem your product solves.
-  > When you live in a popular city, like NYC, SF, London, etc.. friends (close and distant) will likely come for a visit. As a result, you end up writing the same email again and again on where to go and what to check out. 
+
+  > After a vacation of friends, keeping track of costs and figuring out who owes what can be a frustrating task. 
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
-  > My City eliminates this problem by allowing you to curate a map with your local recommendations so that you can easily send to friends. 
+
+  > Splitsies helps you get rid of the giant spreadsheets and does the math for you. Just enter your costs and who traveled with you then Splitsies will tell you who owes what. 
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
-  > "Help out of towners experience your version of your city"
+
+  > "Spend more time planning your next trip, not wrapping up your last one"
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
-  > Log-on and start marking off places on a map with where your friends should visit with a short note about why. Next time your friends ask for recommendations, just send them your My City link!
+  > Click the Get Started button, create a trip, and then enter your costs. 
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
-  > "I used to copy/paste my emails to out-of-towner friends on places to hang out. It was so time-consuming! Or worst.. so many friends come to visit New York, that I can't respond to them all. This made it so easy"
+
+  > "I always hated editing the giant google doc to evenly split vacation costs. I'm so glad Slitsies does the math for me!"
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
-  > "Start making your list now on mycityrecs.com
+  > "Keep track of what you paid for. We'll do the math for you"
