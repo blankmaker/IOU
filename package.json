@@ -1,7 +1,10 @@
 {
-  "name": "iou",
+  "name": "splitsies",
   "version": "0.0.0",
-  "dependencies": {},
+  "main": "server.js",
+  "dependencies": {
+    "express"    : "~4.7.2"
+    },
   "devDependencies": {
     "grunt": "^0.4.1",
     "grunt-autoprefixer": "^0.7.3",
