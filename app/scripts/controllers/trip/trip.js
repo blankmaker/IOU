@@ -9,7 +9,7 @@
  */
  
 angular.module('splitsiesApp')
-  .controller('TripCtrl', function ($scope, Trip) {
+  .controller('TripCtrl', ['$scope', 'Trip', function ($scope, Trip) {
     $scope.trips = Trip.trips;
     $scope.addTrip = Trip.addTrip;
-  });
+  }]);
