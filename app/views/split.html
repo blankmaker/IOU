@@ -1,8 +1,8 @@
 
   <div class="alert alert-success" role="alert" ng-show="showAlert" ng-model="result">
-      <h4>Trip's total cost: {{ result.total | currency }}</h4>
-      <p>Trip's cost per person: {{ result.costPP | currency }} </p>
-     <p ng-repeat="splitter in splitters">{{ splitter.name }} owes {{ splitter.dueMoney | currency | orderBy : reverse }}</p>
+      <h4>Total cost per person is: {{ result.costPP | currency }}, which totals {{ result.total | currency }} for the entire trip</h4>
+      <h5>Based on everyone's contributions: </h5>
+      <p ng-repeat="action in result.actions">{{ action.payer }} owes {{ action.recipient }} {{ action.howMuch | currency }}</p>
   </div>
 
 <div class="panel panel-default">
@@ -32,7 +32,7 @@
 
     <input class="form-control" type="number" placeholder="How much was it?" ng-model="cost" required>
 
-    <input class="form-control" type="text" placeholder="Who paid?" ng-model="whoPaid" required >
+    <input class="form-control" type="text" placeholder="Who paid?" ng-model="whoPaid" required>
 
     <button type="submit" class="btn btn-default">Add to list</button>
 </form>

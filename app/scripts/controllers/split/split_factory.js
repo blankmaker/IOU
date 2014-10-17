@@ -14,8 +14,7 @@ angular.module('splitsiesApp')
       splitters[splitter] = {
         name: splitter,
         contributed: 0,
-        owes: 0, 
-        actions: []
+        owes: 0
       };
       splittersLength++;
     };
@@ -30,7 +29,7 @@ angular.module('splitsiesApp')
         };
         // update totals for later
         total += cost;
-        costPP = total/splittersLength;
+        costPP = Math.floor(total/splittersLength * 100)/100;
         splitters[whoPaid].contributed += cost;
         lineItems.push(lineItem);
       } else {
@@ -43,6 +42,7 @@ angular.module('splitsiesApp')
       var sentenceInfo = {
         toPay: [],
         toGet: [],
+        actions: [],
         total: total,
         costPP: costPP
       };
@@ -59,26 +59,24 @@ angular.module('splitsiesApp')
       sentenceInfo.toPay.sort(function(a,b) { return b.owes-a.owes; });
       sentenceInfo.toGet.sort(function(a,b){ return b.owes-a.owes; });
 
+      // helper to determine who owes what
       var generateActions = function(toPay, toGet) {
         toPay.forEach(function(payer, index) {
           while (payer.owes > 0) {
             toGet.forEach(function(recipient, index) {
               if (payer.owes >= Math.abs(recipient.owes) && recipient.owes < 0) {
-                payer.actions.push({ whoToPay: recipient.name, howMuch: Math.abs(recipient.owes)});
+                sentenceInfo.actions.push({ payer: payer.name, recipient: recipient.name, howMuch: Math.abs(recipient.owes)});
                 payer.owes += recipient.owes;
                 recipient.owes = 0;
-                console.log('payer owes: ', payer, ':', payer.owes);
               } else if (payer.owes < Math.abs(recipient.owes) && recipient.owes < 0) {
-                payer.actions.push({ whoToPay: recipient.name, howMuch: payer.owes});
+                sentenceInfo.actions.push({ payer: payer.name, recipient: recipient.name, howMuch: payer.owes});
                 recipient.owes += payer.owes;
                 payer.owes = 0;
-                console.log('payer owes2: ', payer, ':', payer.owes);
               }
             });
           }
         });
       };
-
       generateActions(sentenceInfo.toPay, sentenceInfo.toGet);
       console.log(sentenceInfo);
       return sentenceInfo;
