@@ -33,7 +33,7 @@ angular.module('splitsiesApp')
         splitters[whoPaid].contributed += cost;
         lineItems.push(lineItem);
       } else {
-        alert(whoPaid + ' is not in your group. Please re-enter your line item with a valid splitter');
+        alert(whoPaid + ' is not in your split group. Please re-enter your line item with a valid splitter.');
       }
     };
 
