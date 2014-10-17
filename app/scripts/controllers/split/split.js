@@ -23,7 +23,6 @@ angular.module('splitsiesApp')
       $scope.item = null;
       $scope.cost = null;
       $scope.whoPaid = null;
-      // console.log(Split)
     };
 
     $scope.showAlert = false;

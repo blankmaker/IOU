@@ -1,7 +1,7 @@
 
   <div class="alert alert-success" role="alert" ng-show="showAlert" ng-model="result">
-      <h4>total {{ result.total | currency }}</h4>
-      <p>The cost per person for this trip is: {{ result.costPP | currency }} </p>
+      <h4>Trip's total cost: {{ result.total | currency }}</h4>
+      <p>Trip's cost per person: {{ result.costPP | currency }} </p>
      <p ng-repeat="splitter in splitters">{{ splitter.name }} owes {{ splitter.dueMoney | currency | orderBy : reverse }}</p>
   </div>
 

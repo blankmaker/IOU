@@ -109,7 +109,10 @@ body {
 
 .splittees {
   margin-left: 100px;
+}
 
+#inline {
+  display: inline-block;
 }
 
 
