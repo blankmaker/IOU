@@ -1,6 +1,5 @@
+(this was my first web app ever created, apologies for the sloppiness! I was learning!)
 ## Splitsies ##
-Site is live at [gosplitsi.es](http://gosplitsi.es) 
- 
 Spend more time exploring and less time bookkeeping
 
 ## Product Summary ##
